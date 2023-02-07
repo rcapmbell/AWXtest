@@ -1,5 +1,5 @@
 ---
-- name: Update and Reboot
+- name: Update and reboot
   hosts: 192.168.1.95
   gather_facts: no
   tasks:
@@ -8,7 +8,7 @@
        name: '*'
        state: latest
        
-    - name: Reboot Server
+    - name: Reboot servers
       reboot:
         pre_reboot_delay: 90
         msg: "Server will be rebooted in 90 seconds."
