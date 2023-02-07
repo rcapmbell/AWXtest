@@ -1,0 +1,15 @@
+---
+- name: Update and Reboot
+  hosts: AWX_Test_Host
+  gather_factrs: no
+  tasks:
+   - name: Upgrade all packages
+     yum:
+       name: '*'
+       state: latest
+       
+    - name: Reboot Server
+      reboot:
+        pre_reboot_delay: 90
+        msg: "Server will be rebooted in 90 seconds."
+...
