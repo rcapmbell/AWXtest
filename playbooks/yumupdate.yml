@@ -1,7 +1,7 @@
 ---
 - name: Update and Reboot
   hosts: 192.168.1.95
-  gather_factrs: no
+  gather_facts: no
   tasks:
    - name: Upgrade all packages
      yum:
