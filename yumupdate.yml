@@ -1,6 +1,6 @@
 ---
 - name: Update and Reboot
-  hosts: AWX_Test_Host
+  hosts: 192.168.1.95
   gather_factrs: no
   tasks:
    - name: Upgrade all packages
