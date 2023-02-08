@@ -3,10 +3,10 @@
   hosts: 192.168.1.97
   gather_facts: no
   tasks:
-   - name: Upgrade all packages
-     yum:
-       name: '*'
-       state: latest
+ #  - name: Upgrade all packages
+  #   yum:
+   #    name: '*'
+    #   state: latest
        
    - name: Reboot servers
      reboot:
