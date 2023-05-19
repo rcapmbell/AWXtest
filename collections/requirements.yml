@@ -1,0 +1,4 @@
+---
+collections:
+- name: oracle.oci
+  source: https://galaxy.ansible.com
