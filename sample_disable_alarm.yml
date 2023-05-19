@@ -1,0 +1,16 @@
+---
+
+- name: Disable Alarm in OCI
+  collections:
+    - oracle.oci
+  connection: local
+  hosts: localhost
+  tasks:
+    - name: Update alarm
+      oci_monitoring_alarm:
+        alarm_id: "ocid1.alarm.oc1.uk-london-1.aaaaaaaa2xg5bfp6seicshb6zxiha2ybqfdy6qjsalxzeccne3dftluvqbbq"
+        is_enabled: false
+      register: result
+    - name: Dump result
+      debug:
+        msg: '{{result}}'
